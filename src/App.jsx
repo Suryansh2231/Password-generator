@@ -34,29 +34,31 @@ const passwordRef = useRef(null)
       style={{
         // display : 'flex',
         // flexDirection : 'column',
+
         backgroundColor: "black",
-        width: "100%",
-        height: 500,
+        // width: 200,
+        // height: 500,
+       
+        
       }}
     >
       <h1 className=" flex justify-center mt-5 font-bold  text-3xl text-white">
-        {" "}
         password generator
       </h1>
-      <div className="bg-gray-800 h-40 w-200 flex shadow overflow-hidden mb-4 mx-auto mt-5 rounded-lg ">
+      <div className="bg-gray-800 h-40 w-200 flex shadow overflow-hidden mb-4 mx-auto mt-5 rounded-lg   flex-wrap">
         <input
-          className="outline-none h-12 w-150 bg-orange-200 flex  mx-auto mt-5  py-3 px-3 rounded-l-2xl "
+          className="outline-none h-12 w-150 bg-orange-200 flex  mx-auto mt-7 py-3 px-3 rounded-l-2xl "
           readOnly
           type="text"
           placeholder="password"
           value={password}
           ref={passwordRef}
         />
-        <button  onClick= {copyPasswordToClipboard}  className="outline-none bg-blue-700 text-orange px-3 py-0.5 shrink-0 h-12 w-17 rounded-r-2xl text-[22px]   my-auto mb-23">
+        <button  onClick= {copyPasswordToClipboard}  className=" bg-blue-700 text-orange h-12 w-17 rounded-r-2xl text-[22px] -mt-12 ml-175">
           Copy
         </button>
         <div
-          className=" items-center gap-x-1 inline-block align-text-bottom"
+          className="   items-center gap-x-1 inline-block align-text-bottom  mb-15 ml-30"
           style={{ display: "flex", flexDirection: "row" }}
         >
           <input
@@ -71,7 +73,7 @@ const passwordRef = useRef(null)
           />
           <label style={{ color: "orange" }}> Length:{length}</label>
         </div>
-        <div className="flex items-center  gap-x-1  ml-3">
+        <div className="flex items-center  gap-x-1 mb-15 ml-3">
           <input
             type="checkbox"
             defaultChecked={numberAllowed}
@@ -82,7 +84,7 @@ const passwordRef = useRef(null)
           />
           <label htmlFor="numInput" className="text-orange-400">Numbers</label>
         </div>
-        <div className="flex items-center  gap-x-1 ml-3">
+        <div className="flex items-center  gap-x-1  mb-15 ml-3">
           <input
             type="checkbox"
             defaultChecked={charAllowed}
